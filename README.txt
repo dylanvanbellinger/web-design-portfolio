@@ -12,4 +12,4 @@ Important notes:
 - All files must be uploaded to the main branch of your GitHub repository
 - Folder names and file paths must stay the same
 - GitHub Pages must be enabled under Settings → Pages
-
+<link rel="stylesheet" href="css/styles.css">
