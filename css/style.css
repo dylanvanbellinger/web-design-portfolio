@@ -1,0 +1,42 @@
+/* ===== Lab 3.1: Typography Foundations ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
+  background-color: #ffffff;
+}
+
+/* ===== Lab 3.2: Typography & Spacing System ===== */
+
+:root {
+  --space-1: 1rem;
+  --space-2: 2rem;
+  --space-4: 4rem;
+
+  --text-base: 1rem;
+  --text-h3: 1.25rem;
+  --text-h2: 1.75rem;
+  --text-h1: 2.5rem;
+}
+
+/* Main layout */
+
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: var(--space-2);
+}
+
+/* Headings */
+
+h1 {
+  font-size: var(--text-h1);
+  line-height: 1.15;
+  margin-bottom: var(--space-1);
