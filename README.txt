@@ -1,15 +1,25 @@
-MFJS 3501 — Lab 1.1: Hello World
+MFJS 3501 — Lab 4.1: Responsive Layout Foundations
 
-This folder contains my first published website using GitHub Pages.
+This folder contains a multi-page personal website built using semantic HTML and mobile-first CSS.
+The site is published using GitHub Pages and adapts across screen sizes.
 
 Files included:
-- index.html → the main webpage (must be named index.html)
-- css/style.css → stylesheet for the page
-- images/placeholder.jpg → image asset used on the page
+- index.html → home page
+- about.html → about page
+- portfolio.html → portfolio page
+- contact.html → contact page
+- css/style.css → external stylesheet (mobile-first + media query)
+- images/placeholder.jpg → responsive image asset
 - README.txt → this file
 
-Important notes:
-- All files must be uploaded to the main branch of your GitHub repository
-- Folder names and file paths must stay the same
-- GitHub Pages must be enabled under Settings → Pages
+Lab requirements met:
+- Mobile-first, single-column layout
+- Viewport meta tag on all pages
+- Responsive images
+- At least one media query for larger screens
+- Tested at phone, tablet, and desktop widths
 
+Important notes:
+- All files are uploaded to the main branch
+- Folder names and file paths remain consistent
+- GitHub Pages is enabled under Settings → Pages
