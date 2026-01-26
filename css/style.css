@@ -145,3 +145,33 @@ footer {
   color: var(--muted);
   font-size: 0.95rem;
 }
+/* ===============================
+   Lab 4.1 — Responsive additions
+   =============================== */
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mobile-first tweak: make main padding a bit tighter on phones */
+main {
+  padding: var(--space-1);
+}
+
+/* Media query: enhance spacing for tablets + larger */
+@media (min-width: 768px) {
+  main {
+    padding: var(--space-2) var(--space-1);
+  }
+
+  header {
+    padding: var(--space-3) var(--space-1);
+  }
+
+  nav li {
+    margin-bottom: 0;
+  }
+}
