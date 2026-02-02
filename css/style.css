@@ -184,3 +184,19 @@ select:focus {
   outline: 3px solid currentColor;
   outline-offset: 3px;
 }
+/* Release 4 — mobile nav improvement */
+nav a {
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  nav li {
+    display: block;
+    margin-right: 0;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+  }
+}
