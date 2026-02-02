@@ -175,3 +175,12 @@ main {
     margin-bottom: 0;
   }
 }
+/* Lab 4.3 — focus visibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
