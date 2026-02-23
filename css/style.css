@@ -204,3 +204,7 @@ nav a {
 .hidden {
   display: none;
 }
+/* Release 7 — used for JS toggle */
+.hidden {
+  display: none;
+}
