@@ -1,73 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio | Dylan VanBellinger</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header>
-    <h1>Portfolio</h1>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
+  <header>
     <nav aria-label="Primary">
-      <ul>
+      <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a aria-current="page" href="portfolio.html">Portfolio</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
+    <h1>Portfolio</h1>
 
-    <!-- INTERACTIVE STORY COMPONENT -->
     <section>
-      <h2>My Web Design Progress Timeline</h2>
-
-      <p>
-        This interactive timeline shows key milestones in how I built and improved this portfolio site, from early structure and styling to user experience and JavaScript interaction.
-      </p>
-
-      <p>
-        <strong>Accessibility note:</strong> If the interactive does not load, the timeline presents my progress in chronological order across major releases including multi-page structure, styling system, responsive updates, user flows, and JavaScript interaction.
-      </p>
-
-      <iframe
-        title="Timeline of Dylan VanBellinger’s portfolio site progress"
-        src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=2PACX-1vT8FQkpgqVrFhafdzWnmxtV7C-woGISm6URV5JVA-VvNDZYcaBGXCwgBndQmU-qHhpLME0OTgTzv1a4&font=Default&lang=en&initial_zoom=2&height=600"
-        width="100%"
-        height="600"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
+      <h2>Project 1</h2>
+      <p>1–2 sentences: what it is + what you did.</p>
+      <p><a href="#" target="_blank" rel="noopener">View project</a></p>
     </section>
 
     <section>
-      <h2>Featured Projects</h2>
-
-      <p>
-        Below are sample projects that demonstrate my developing skills in communication strategy,
-        digital storytelling, and web design. Future versions of this portfolio will include
-        visuals, process explanations, and links to completed work.
-      </p>
-
-      <ul>
-        <li><strong>Project 1:</strong> Social media campaign concept (placeholder)</li>
-        <li><strong>Project 2:</strong> Event promotion materials (placeholder)</li>
-        <li><strong>Project 3:</strong> Website design and development (placeholder)</li>
-      </ul>
+      <h2>Project 2</h2>
+      <p>1–2 sentences: what it is + what you did.</p>
+      <p><a href="#" target="_blank" rel="noopener">View project</a></p>
     </section>
-
   </main>
 
   <footer>
-    <p>Built by Dylan VanBellinger · MFJS 3501</p>
+    <p>Built by Dylan VanBellinger</p>
   </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>
