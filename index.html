@@ -1,76 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Dylan VanBellinger</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header>
-    <h1>Dylan VanBellinger</h1>
-    <p>Strategic Communication + Marketing student exploring digital storytelling and web design.</p>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <nav aria-label="Primary Navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
+  <header>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a aria-current="page" href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
-        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
+    <h1>Dylan VanBellinger</h1>
+    <p>Strategic Communication + Marketing student exploring digital storytelling and web design.</p>
 
-    <!-- READ MORE INTERACTION -->
-    <section>
-      <h2>About Me</h2>
+    <h2>About Me</h2>
+    <p>I am a Strategic Communication major at the University of Denver.</p>
+    <p>I focus on marketing, branding, and digital storytelling. I enjoy creating user-centered content and building professional portfolios.</p>
 
-      <p>
-        I am a Strategic Communication major at the University of Denver.
-      </p>
+    <h2>Welcome</h2>
+    <p>This site is a personal portfolio and practice space where I’m learning how to structure web content using semantic HTML.</p>
+    <p>I’m interested in how design, writing, and strategy work together to create meaningful digital experiences.</p>
+    <p>Use the navigation above to learn more about me, explore my work, or get in touch.</p>
 
-      <p id="more-text" class="hidden">
-        I focus on marketing, branding, and digital storytelling. I enjoy creating user-centered content and building professional portfolios.
-      </p>
+    <h2>What I’m Learning</h2>
+    <ul>
+      <li>How semantic HTML communicates structure and meaning</li>
+      <li>How multi-page sites connect through navigation</li>
+      <li>How to organize files for small websites</li>
+    </ul>
 
-      <button id="read-more-btn">Read More</button>
-    </section>
-
-    <section>
-      <h2>Welcome</h2>
-      <p>
-        This site is a personal portfolio and practice space where I’m learning how to structure
-        web content using semantic HTML.
-      </p>
-      <p>
-        I’m interested in how design, writing, and strategy work together to create meaningful
-        digital experiences.
-      </p>
-      <p>
-        Use the navigation above to learn more about me, explore my work, or get in touch.
-      </p>
-    </section>
-
-    <section>
-      <h2>What I’m Learning</h2>
-      <ul>
-        <li>How semantic HTML communicates structure and meaning</li>
-        <li>How multi-page sites connect through navigation</li>
-        <li>How to organize files for small websites</li>
-      </ul>
-    </section>
-
+    <footer>
+      <p>Built by Dylan VanBellinger · MFJS 3501</p>
+    </footer>
   </main>
-
-  <footer>
-    <p>Built by Dylan VanBellinger · MFJS 3501 · Week 2</p>
-  </footer>
-
-  <script src="script.js"></script>
-
 </body>
 </html>
-
