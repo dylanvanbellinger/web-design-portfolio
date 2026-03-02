@@ -1,53 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Dylan VanBellinger</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header>
-    <h1>Contact</h1>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
+  <header>
     <nav aria-label="Primary">
-      <ul>
+      <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a aria-current="page" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Get in touch</h2>
-      <p>
-        This page is a placeholder for contact options. Later, I can add a simple contact form (or just a mailto link)
-        and links to professional profiles.
-      </p>
-      <p>
-        For now, the main purpose is to complete the multi-page structure and ensure the navigation works.
-      </p>
-      <p>
-        If you’re reviewing this site, please use the nav menu above to move between pages.
-      </p>
-    </section>
-
-    <section>
-      <h2>Contact options</h2>
-      <ul>
-        <li>Email: <a href="#">(add later)</a></li>
-        <li>LinkedIn: <a href="#">(add later)</a></li>
-      </ul>
-    </section>
+  <main id="main">
+    <h1>Contact</h1>
+    <p>Email: <a href="mailto:youremail@du.edu">youremail@du.edu</a></p>
+    <p>LinkedIn: <a href="#" target="_blank" rel="noopener">Your LinkedIn profile</a></p>
   </main>
 
   <footer>
-    <p>&copy; 2026 Dylan VanBellinger</p>
+    <p>Built by Dylan VanBellinger</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
