@@ -209,89 +209,76 @@ nav a {
   display: none;
 }
 /* =========================
-UI COMPONENTS
-Lab 9.2
-========================= */
+   Lab 9.2 — UI Components
+   Reusable Buttons + Cards + Consistent Spacing
+   (Works with your existing :root system)
+   ========================= */
 
-/* Spacing system (8pt scale) */
-:root{
-  --space-1: 8px;
-  --space-2: 16px;
-  --space-3: 24px;
-  --space-4: 32px;
+/* Add missing design tokens (safe additions) */
+:root {
+  --surface: #f5f7fa;      /* light surface for cards/sections */
+  --accent-hover: #004494; /* hover color for accent */
 }
 
-/* Buttons */
-
-.btn{
-  display:inline-block;
-  padding: var(--space-1) var(--space-2);
-  border-radius:6px;
-  font-weight:500;
-  text-decoration:none;
-  cursor:pointer;
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;       /* consistent tap target */
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
 }
 
-/* Primary button */
-
-.btn-primary{
+.btn-primary {
   background: var(--accent);
-  color:white;
+  color: #ffffff;
 }
 
-.btn-primary:hover{
+.btn-primary:hover,
+.btn-primary:focus {
   background: var(--accent-hover);
 }
 
-.btn-primary:focus-visible{
-  outline:3px solid var(--border);
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
-/* Secondary button */
-
-.btn-secondary{
-  background:white;
-  border:2px solid var(--accent);
-  color:var(--accent);
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: var(--accent-soft);
 }
 
-.btn-secondary:hover{
+/* Make <button> match .btn styles too */
+button.btn {
+  font: inherit;
+}
+
+/* CARDS */
+.card {
   background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space-1);
+  margin: var(--space-2) 0;
 }
 
-/* Card component */
-
-.card{
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding: var(--space-2);
-  background: var(--surface);
-  margin-bottom: var(--space-2);
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
 }
 
-.card img{
-  width:100%;
-  border-radius:6px;
-}
-
-.card h3{
+.card h3 {
   margin-top: var(--space-1);
 }
 
-/* Navigation improvements */
-
-.nav a{
-  padding:6px 10px;
-  border-radius:6px;
-}
-
-.nav a:hover{
-  background: var(--surface);
-}
-
-/* Active page */
-
-.nav a.active{
-  font-weight:600;
-  border-bottom:2px solid var(--accent);
+/* NAV: you already have aria-current styles ✅
+   Add a clearer hover target without changing layout */
+nav a {
+  min-height: 44px; /* mobile tap target */
 }
