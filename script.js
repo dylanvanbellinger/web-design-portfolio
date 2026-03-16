@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       moreText.classList.toggle("hidden");
 
-      if (button.textContent === "Read More") {
-        button.textContent = "Read Less";
-      } else {
+      if (moreText.classList.contains("hidden")) {
         button.textContent = "Read More";
+      } else {
+        button.textContent = "Read Less";
       }
     });
   }
