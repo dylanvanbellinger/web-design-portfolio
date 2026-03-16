@@ -1,11 +1,16 @@
-const button = document.querySelector("#read-more-btn");
-const moreText = document.querySelector("#more-text");
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("read-more-btn");
+  const moreText = document.getElementById("more-text");
 
-if (button && moreText) {
-  button.addEventListener("click", () => {
-    moreText.classList.toggle("hidden");
+  if (button && moreText) {
+    button.addEventListener("click", function () {
+      moreText.classList.toggle("hidden");
 
-    const isHidden = moreText.classList.contains("hidden");
-    button.textContent = isHidden ? "Read More" : "Read Less";
-  });
-}
+      if (button.textContent === "Read More") {
+        button.textContent = "Read Less";
+      } else {
+        button.textContent = "Read More";
+      }
+    });
+  }
+});
