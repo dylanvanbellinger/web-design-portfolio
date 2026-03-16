@@ -1,7 +1,5 @@
 /* =========================================
-   Release 3 — Styled Multi-Page Website
-   Typography · Spacing · Color · Navigation
-   No flexbox / grid / floats
+   Final Portfolio Stylesheet
 ========================================= */
 
 * {
@@ -9,28 +7,25 @@
 }
 
 :root {
-  /* Spacing system */
   --space-1: 1rem;
   --space-2: 2rem;
   --space-3: 3rem;
   --space-4: 4rem;
 
-  /* Type scale */
   --text-base: 1rem;
   --text-h3: 1.25rem;
   --text-h2: 1.75rem;
   --text-h1: 2.5rem;
 
-  /* Color system */
   --bg: #ffffff;
   --text: #222222;
   --muted: #666666;
-
   --accent: #0057b8;
   --accent-soft: #eef5ff;
-
-  --nav-bg: #f4f4f4;
+  --accent-hover: #004494;
   --border: #e6e6e6;
+  --surface: #f5f7fa;
+  --nav-bg: #f4f4f4;
 }
 
 body {
@@ -42,14 +37,29 @@ body {
   background-color: var(--bg);
 }
 
-/* Content container */
+/* Layout */
+header {
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-2) var(--space-1);
+}
+
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: var(--space-2) var(--space-1);
 }
 
-/* Headings */
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: var(--space-4);
+  padding: var(--space-2) var(--space-1);
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Typography */
 h1 {
   font-size: var(--text-h1);
   line-height: 1.15;
@@ -87,95 +97,24 @@ a:focus {
   text-decoration: underline;
 }
 
-/* Header + Navigation */
-header {
-  background-color: var(--nav-bg);
-  border-bottom: 1px solid var(--border);
-  padding: var(--space-2) var(--space-1);
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  color: #222222;
+  border: 2px solid #222222;
 }
 
-header h1 {
-  margin: 0;
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 9999;
 }
 
-nav {
-  margin-top: var(--space-1);
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin-right: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  color: var(--text);
-  background-color: transparent;
-  border: 1px solid transparent;
-}
-
-nav a:hover,
-nav a:focus {
-  color: var(--accent);
-  background-color: var(--accent-soft);
-  border-color: #cfe3ff;
-  text-decoration: none;
-}
-
-nav a[aria-current="page"] {
-  background-color: var(--accent);
-  color: #ffffff;
-  border-color: var(--accent);
-}
-
-/* Footer (optional) */
-footer {
-  border-top: 1px solid var(--border);
-  margin-top: var(--space-4);
-  padding: var(--space-2) var(--space-1);
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-/* ===============================
-   Lab 4.1 — Responsive additions
-   =============================== */
-
-/* Responsive images */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Mobile-first tweak: make main padding a bit tighter on phones */
-main {
-  padding: var(--space-1);
-}
-
-/* Media query: enhance spacing for tablets + larger */
-@media (min-width: 768px) {
-  main {
-    padding: var(--space-2) var(--space-1);
-  }
-
-  header {
-    padding: var(--space-3) var(--space-1);
-  }
-
-  nav li {
-    margin-bottom: 0;
-  }
-}
-/* Lab 4.3 — focus visibility */
+/* Focus styles */
 a:focus,
 button:focus,
 input:focus,
@@ -184,51 +123,55 @@ select:focus {
   outline: 3px solid currentColor;
   outline-offset: 3px;
 }
-/* Release 4 — mobile nav improvement */
-nav a {
+
+/* Navigation */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
   display: inline-block;
+  margin-right: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 480px) {
-  nav li {
-    display: block;
-    margin-right: 0;
-  }
-
-  nav a {
-    display: block;
-    width: 100%;
-  }
-}
-/* Lab 7.2 — DOM Interaction Mini-Demo */
-.hidden {
-  display: none;
-}
-/* Release 7 — used for JS toggle */
-.hidden {
-  display: none;
-}
-/* =========================
-   Lab 9.2 — UI Components
-   Reusable Buttons + Cards + Consistent Spacing
-   (Works with your existing :root system)
-   ========================= */
-
-/* Add missing design tokens (safe additions) */
-:root {
-  --surface: #f5f7fa;      /* light surface for cards/sections */
-  --accent-hover: #004494; /* hover color for accent */
+.nav a {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  color: var(--text);
+  background-color: transparent;
+  border: 1px solid transparent;
+  min-height: 44px;
 }
 
-/* BUTTONS */
+.nav a:hover,
+.nav a:focus {
+  color: var(--accent);
+  background-color: var(--accent-soft);
+  border-color: #cfe3ff;
+  text-decoration: none;
+}
+
+.nav a[aria-current="page"] {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+/* Buttons */
 .btn {
   display: inline-block;
-  padding: 0.5rem 0.9rem;       /* consistent tap target */
+  padding: 0.5rem 0.9rem;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   border: 2px solid transparent;
   cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
 }
 
 .btn-primary {
@@ -239,6 +182,7 @@ nav a {
 .btn-primary:hover,
 .btn-primary:focus {
   background: var(--accent-hover);
+  color: #ffffff;
 }
 
 .btn-secondary {
@@ -252,12 +196,11 @@ nav a {
   background: var(--accent-soft);
 }
 
-/* Make <button> match .btn styles too */
 button.btn {
   font: inherit;
 }
 
-/* CARDS */
+/* Cards */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -277,8 +220,48 @@ button.btn {
   margin-top: var(--space-1);
 }
 
-/* NAV: you already have aria-current styles ✅
-   Add a clearer hover target without changing layout */
-nav a {
-  min-height: 44px; /* mobile tap target */
+/* Utilities */
+.hidden {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+main p {
+  max-width: 650px;
+}
+
+main h2 {
+  margin-top: 2.5rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  main {
+    padding: var(--space-2) var(--space-1);
+  }
+
+  header {
+    padding: var(--space-3) var(--space-1);
+  }
+
+  .nav li {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav li {
+    display: block;
+    margin-right: 0;
+  }
+
+  .nav a {
+    display: block;
+    width: 100%;
+  }
 }
